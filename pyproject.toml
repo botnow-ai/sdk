@@ -1,0 +1,31 @@
+[tool.poetry]
+authors = ["bjwswang <bjwswang@gmail.com>"]
+description = ""
+name = "sdk"
+readme = "README.md"
+version = "0.0.1"
+
+[tool.poetry.dependencies]
+grpc-interceptor = "^0.15.4"
+grpcio = "^1.65.5"
+grpcio-tools = "^1.65.4"
+minio = "^7.1.14"
+pydantic = "^2.8.2"
+python = ">=3.9,<3.13"
+python-dotenv = "^1.0.1"
+
+[tool.poetry.group.dev.dependencies]
+black = "23.3.0"
+pylint = "3.1.0"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core"]
+
+[[tool.poetry.source]]
+name = "tuna"
+priority = "primary"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+
+[tool.pylint.MASTER]
+ignore-paths = '^sdk/pb'

@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package agent_chat_engine.v1;
+option go_package = "gitlab.botnow.cn/micros/base/pb/agent-chat-engine/v1";
+
+import "google/protobuf/timestamp.proto";
+import "microcommon/v1/common.proto";
+
+service AgentChatEngineService {
+    rpc Call(CallRequest) returns (CallResponse);
+    rpc StreamCall(StreamCallRequest) returns (stream StreamCallResponse);
+}
+
+message HistoryMessage {
+    string query = 1;
+    string answer = 2;
+}
+
+message CallRequest {
+    string id = 1;
+    microcommon.v1.Resource agent = 2;
+    string query = 3;
+    repeated HistoryMessage history = 4;
+}
+
+message CallResponse {
+    string id = 1;
+    string answer = 2;
+    int64 latency = 3;
+    google.protobuf.Timestamp created_at = 4;
+}
+
+message StreamCallRequest {
+    string id = 1;
+    microcommon.v1.Resource agent = 2;
+    string query = 3;
+    repeated HistoryMessage history = 4;
+    bool show_debug = 5;
+}
+
+message StreamCallResponse {
+    string id = 1;
+    string answer = 2;
+    int64 latency = 3;
+    google.protobuf.Timestamp created_at = 4;
+}
+
+

@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package microcommon.v1;
+
+option go_package = "gitlab.botnow.cn/micros/base/pb/microcommon/v1";
+
+message Resource {
+    string name = 1;
+    string project = 2;
+}
