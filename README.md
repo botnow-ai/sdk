@@ -19,4 +19,13 @@ pip install -e.
 
 3. Use it with this example!
 
+```shell
+cd examples
+python stream_chat.py
+```
+
 See [examples](examples/stream_chat.py) for more details.
+
+## API Docs
+
+- [agent-chat](docs/agent_chat_engine.md)

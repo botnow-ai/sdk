@@ -1,7 +1,6 @@
 syntax = "proto3";
 
 package agent_chat_engine.v1;
-option go_package = "gitlab.botnow.cn/micros/base/pb/agent-chat-engine/v1";
 
 import "google/protobuf/timestamp.proto";
 import "microcommon/v1/common.proto";

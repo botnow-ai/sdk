@@ -24,14 +24,13 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1bmicrocommon/v1/common.proto\x12\x0emicrocommon.v1\")\n\x08Resource\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07project\x18\x02 \x01(\tB0Z.gitlab.botnow.cn/micros/base/pb/microcommon/v1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1bmicrocommon/v1/common.proto\x12\x0emicrocommon.v1\")\n\x08Resource\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07project\x18\x02 \x01(\tb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'microcommon.v1.common_pb2', _globals)
 if not _descriptor._USE_C_DESCRIPTORS:
-  _globals['DESCRIPTOR']._loaded_options = None
-  _globals['DESCRIPTOR']._serialized_options = b'Z.gitlab.botnow.cn/micros/base/pb/microcommon/v1'
+  DESCRIPTOR._loaded_options = None
   _globals['_RESOURCE']._serialized_start=47
   _globals['_RESOURCE']._serialized_end=88
 # @@protoc_insertion_point(module_scope)
